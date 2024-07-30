@@ -1,22 +1,19 @@
-// src/services/emailService.js
 const nodemailer = require('nodemailer');
 
-// Create a transporter object using SMTP transport
 const transporter = nodemailer.createTransport({
-  service: 'gmail', // Use Gmail for sending email
+  service: 'gmail',
   auth: {
-    user: 'samriddhabasu35@gmail.com', // Your Gmail address
-    pass: 'xlop xywl nnvk qaej'         // Your Gmail password or app-specific password
+    user: 'samriddhabasu35@gmail.com',
+    pass: 'xlop xywl nnvk qaej'      
   }
 });
 
-// Function to send an email
 const sendEmail = async (to, subject, text) => {
   const mailOptions = {
-    from: 'samriddhabas1234@gmail.com', // Sender address
-    to: to,                            // Recipient address
-    subject: subject,                 // Subject line
-    text: text                        // Plain text body
+    from: 'samriddhabas1234@gmail.com', 
+    to: to,                            
+    subject: subject,               
+    text: text                        
   };
 
   try {

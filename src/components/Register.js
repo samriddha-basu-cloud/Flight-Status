@@ -10,18 +10,15 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Register the user
+
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      // Save user data to Firestore
+
       await setDoc(doc(db, 'users', user.email), {
         email: user.email,
-        // Add other user details here if needed
-      });
 
-      // Redirect or perform additional actions after successful registration
-      // For example, navigate to the login page
+      });
     } catch (error) {
       setError(error.message);
     }

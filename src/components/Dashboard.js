@@ -6,7 +6,7 @@ const Dashboard = () => {
   const location = useLocation();
   const [flights, setFlights] = useState([]);
   const [notification, setNotification] = useState({ title: '', body: '' });
-  const loggedInUserEmail = location.state?.email || 'unknown@example.com'; // Default value if no email is passed
+  const loggedInUserEmail = location.state?.email || 'unknown@example.com'; 
 
   const getFlightData = useCallback(async () => {
     const response = await fetch('http://localhost:5002/flights');
