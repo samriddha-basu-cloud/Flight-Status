@@ -1,18 +1,19 @@
 // firebase.js
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { getFirestore, doc, setDoc } from "firebase/firestore";  // Import Firestore methods
+import { getFirestore } from "firebase/firestore";  // Import Firestore methods
 import { getMessaging, getToken, onMessage } from "firebase/messaging";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDCbyeTiPh14Xy2Mw63I9r9dRnRSAdu9N0",
-  authDomain: "flight-status-notify.firebaseapp.com",
-  projectId: "flight-status-notify",
-  storageBucket: "flight-status-notify.appspot.com",
-  messagingSenderId: "774945646151",
-  appId: "1:774945646151:web:489b40b3427b9db6d7b362",
-  measurementId: "G-0C5DVZY80S"
+  apiKey: "AIzaSyBuQbqMpbSZGu1O-FWqF_-YUdLkxIp_IL4",
+  authDomain: "flight-status-notify-32f37.firebaseapp.com",
+  projectId: "flight-status-notify-32f37",
+  storageBucket: "flight-status-notify-32f37.appspot.com",
+  messagingSenderId: "760629100492",
+  appId: "1:760629100492:web:c0478c550548d1b88e6769",
+  measurementId: "G-VFMLPPC80W"
 };
+
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
